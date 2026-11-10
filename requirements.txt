@@ -1,0 +1,6 @@
+PyQt5>=5.15
+numpy
+soundcard>=0.4.4
+faster-whisper>=1.0.0
+argostranslate>=1.9.6
+pynput>=1.7.6
