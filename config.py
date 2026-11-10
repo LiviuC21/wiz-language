@@ -26,12 +26,12 @@ MAX_QUEUE_SEGMENTS = 4          # if Whisper falls behind, oldest audio is dropp
 DISPLAY_LANG = "ro"             # incoming speech is translated INTO this language
 CHAT_INPUT_LANG = "ro"          # language you type in the overlay
 CHAT_OUTPUT_LANG = "en"         # language that is typed into the game
-SOURCE_LANGUAGES = {            # combo box in the overlay (label -> Whisper code)
+SOURCE_LANGUAGES = {            # meniul de setari (eticheta -> cod Whisper)
     "Auto-detect": None,
     "English": "en",
-    "Portuguese": "pt",
-    "Spanish": "es",
     "French": "fr",
+    "Spanish": "es",
+    "Portuguese": "pt",
     "German": "de",
     "Russian": "ru",
 }
@@ -42,3 +42,9 @@ CHAT_OPEN_KEY = None            # e.g. "t" or "enter" if your game needs a key t
 PRESS_ENTER_AFTER = True        # press Enter after typing to send the message
 TYPE_DELAY = 0.004              # seconds between characters (raise if game drops keys)
 REFOCUS_DELAY = 0.25            # wait after re-activating the game window
+
+# ---------------------------------------------------------------- Overlay UI
+FONT_SIZE_DEFAULT = 11          # pt, dimensiunea initiala a textului
+FONT_SIZE_MIN = 8
+FONT_SIZE_MAX = 28
+HISTORY_MAX_BLOCKS = 500
