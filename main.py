@@ -12,6 +12,7 @@ import logging
 import os
 import platform
 import queue
+import argostranslate.translate
 import sys
 
 import config
