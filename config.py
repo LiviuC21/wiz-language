@@ -7,7 +7,7 @@ APP_DIR = Path(__file__).resolve().parent
 MODELS_DIR = APP_DIR / "models"  # faster-whisper models are cached here
 
 # ---------------------------------------------------------------- Speech-to-text
-WHISPER_MODEL = "tiny"          # "tiny" = fastest / smallest; "base" = better accuracy
+WHISPER_MODEL = "small"          # "tiny" = fastest / smallest; "base" = better accuracy
 WHISPER_COMPUTE_TYPE = "int8"   # best CPU speed/size trade-off
 WHISPER_CPU_THREADS = 2         # keep low so the game keeps its CPU
 WHISPER_BEAM_SIZE = 1           # greedy decoding = lowest latency
