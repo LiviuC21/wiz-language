@@ -63,18 +63,19 @@ def run_app(args: argparse.Namespace) -> int:
         logging.warning("Wayland session detected: keystroke injection into other apps will "
                         "NOT work. Choose an 'Xorg/X11' session at the login screen.")
 
-    from PyQt5 import QtCore, QtWidgets
+    # 1. Încărcăm modelele AI și PyTorch PRIMELE, înainte de grafică!
+    from translation import Translator
+    translator = Translator() 
 
+    # 2. Abia acum încărcăm interfața grafică PyQt5
+    from PyQt5 import QtCore, QtWidgets
     from audio import AudioCaptureThread
     from output import FocusTracker, OutgoingWorker
     from overlay import OverlayWindow
     from stt import TranscriptionThread
-    from translation import Translator
 
     QtWidgets.QApplication.setAttribute(QtCore.Qt.AA_EnableHighDpiScaling, True)
     app = QtWidgets.QApplication(sys.argv)
-
-    translator = Translator()
     segments: "queue.Queue" = queue.Queue(maxsize=config.MAX_QUEUE_SEGMENTS)
 
     capture = AudioCaptureThread(segments, args.device)
