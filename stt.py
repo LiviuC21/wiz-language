@@ -82,7 +82,7 @@ class TranscriptionThread(QtCore.QThread):
             task="transcribe",
             beam_size=config.WHISPER_BEAM_SIZE,
             temperature=0.0,
-            vad_filter=True,
+            vad_filter=False,
             vad_parameters={"min_silence_duration_ms": 300},
             condition_on_previous_text=False,
             without_timestamps=True,
