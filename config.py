@@ -48,3 +48,9 @@ FONT_SIZE_DEFAULT = 11          # pt, dimensiunea initiala a textului
 FONT_SIZE_MIN = 8
 FONT_SIZE_MAX = 28
 HISTORY_MAX_BLOCKS = 500
+
+# ---------------------------------------------------------------- Macro Chat Jocuri
+CHAT_OPEN_KEY = 'y'         # Tasta universală pentru deschis chat-ul (pune 't' dacă joci mai mult Minecraft)
+PRESS_ENTER_AFTER = True    # Apasă automat Enter pentru a trimite mesajul pe server
+REFOCUS_DELAY = 0.15        # Timpul de așteptare după mutarea ferestrei, înainte să apese tasta de chat
+TYPE_DELAY = 0.005          # Pauza invizibilă între litere (previne blocarea din cauza anti-spam-ului)
